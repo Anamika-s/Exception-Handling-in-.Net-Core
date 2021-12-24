@@ -1,0 +1,24 @@
+﻿	@{
+     Layout = null;  // clean up F12 tool network tab
+     }
+	@{ ViewData["Title"] = "Status Code @ViewBag.ErrorStatusCode"; }
+
+<head>
+     	    <!-- prevent favicon.ico from being requested. -->
+     
+    <link rel="icon" href="data:,">
+     
+</head>
+10.
+11.	<h1>MyStatusCode page</h1>
+12.	<h2 class="text-danger">Status Code: @ViewBag.ErrorStatusCode</h2>
+13.	<h2 class="text-danger"> @ViewBag.ErrorMessage</h2>
+ 
+ 	@if (ViewBag.ShowRequestId)
+     {
+ 	<h3>Request ID</h3>
+ 	                <p>
+     	                    <code>@ViewBag.RequestId</code>
+     
+</p>
+ 	}

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Divide";
+}
+
+<h1>Divide</h1>
+ @{ if (ViewBag.result != null)
+     {
+         @ViewBag.result
+     }
+     else
+     {
+  using (Html.BeginForm())
+{<div>
+    @Html.Label("Enter No1 ")
+    @Html.TextBox("no1")
+</div>
+ <div>
+     @Html.Label("Enter No2 ")
+     @Html.TextBox("no2")
+
+ </div>
+ <button type="submit"> Divide  </button>
+}
+
+ }
+
+    }
